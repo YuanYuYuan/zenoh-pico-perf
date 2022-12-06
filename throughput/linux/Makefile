@@ -21,7 +21,7 @@ all:
 	gcc -O3 -Wall opc-ua/opcua_server_thr.c -lopen62541 -o target/opcua_server_thr
 
 build_zenoh:
-	@./zenoh/build.sh
+	@../../scripts/build-zenoh.sh zenoh
 
 clean:
 	rm -rf target

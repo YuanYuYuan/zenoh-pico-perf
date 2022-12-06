@@ -2,8 +2,11 @@
 
 root_dir=$(git rev-parse --show-toplevel)
 source $root_dir/scripts/set-env.sh
-echo $LD_LIBRARY_PATH
-src_dir=$(dirname $(realpath ${BASH_SOURCE[0]}))
+[ -z $1 ] && {
+    echo "Usage: ./build-zenoh.sh ZENOH_SRC_DIR"
+    exit
+}
+src_dir=$(realpath $1)
 target_dir=$src_dir/../target
 mkdir -p $target_dir
 
