@@ -6,7 +6,7 @@ mkdir -p $install_dir
 cd $install_dir
 mkdir -p src
 
-git -C ./src/zenoh-pico pull 2> /dev/null || git clone https://github.com/YuanYuYuan/zenoh-pico -b PR/install-prefix ./src/zenoh-pico
+git -C ./src/zenoh-pico pull 2> /dev/null || git clone https://github.com/yuanyuyuan/zenoh-pico -b test/old-protocol ./src/zenoh-pico
 
 cd ./src/zenoh-pico
 INSTALL_PREFIX=$root_dir/install make
