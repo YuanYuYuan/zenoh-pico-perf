@@ -13,6 +13,6 @@ mkdir -p $target_dir
 for prog in $src_dir/*.c; do
     prog_name=$(basename $prog)
     gcc -O3 -Wall \
-        -DZENOH_LINUX $prog -lzenohpico \
+        -DZENOH_LINUX $prog -lzenohpico -lpthread \
         -o $target_dir/${prog_name%.*}
 done
